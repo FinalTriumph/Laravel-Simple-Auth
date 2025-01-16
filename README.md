@@ -15,7 +15,7 @@ zsh: command not found: laravel
 ```
 This fixes it for me:
 ```
-export PATH="$HOME/.config/composer/vendor/bin:$PATH" 
+export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 ```
 
 During installation process:
@@ -262,7 +262,7 @@ And can also make changes in `/resources/css/app.css`, to at this point make it 
 
 @layer components {
     .btn-action {
-        @apply bg-cyan-600 text-white font-bold m-1 py-2 px-6 rounded-md hover:opacity-90 active:opacity-80;
+        @apply bg-slate-700 text-white font-bold m-1 py-2 px-6 rounded-md hover:opacity-90 active:opacity-80;
     }
 }
 ```
@@ -300,7 +300,7 @@ Next create `AuthController.php`, can do:
 ```
 php artisan make:controller AuthController
 ```
-For now, just add three functions which will simply show that requests are reaching them:
+For now, in `/app/Http/Controllers/AuthController.php` just add three functions which will simply show that requests are reaching them:
 ```
 public function register(Request $request)
 {
@@ -337,7 +337,7 @@ Then in `/resources/views/auth/register.blade.php` create register form, which c
             @csrf
 
             <div class="my-4">
-                <label for="username">Name:</label>
+                <label for="name">Name:</label>
                 <input
                     type="text"
                     name="name"
@@ -455,7 +455,7 @@ use Illuminate\Support\Facades\Auth;
 Now can try to submit empty form and will see that need to adjust forms to show errors. Every input field which is included in validation, needs to be adjusted to look like this:
 ```
 <div class="my-4">
-    <label for="username">Name:</label>
+    <label for="name">Name:</label>
     <input
         type="text"
         name="name"
@@ -498,7 +498,7 @@ value="{{ old('name') }}"
 Overall `name` field now will look like this:
 ```
 <div class="my-4">
-    <label for="username">Name:</label>
+    <label for="name">Name:</label>
     <input
         type="text"
         name="name"
