@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn-action {
+        @apply bg-slate-700 text-white font-bold m-1 py-2 px-6 rounded-md hover:opacity-90 active:opacity-80;
+    }
+
+    .form-auth {
+        @apply inline-block bg-slate-100 py-2 px-8 rounded-md border border-slate-300;
+    }
+
+    .input-text {
+        @apply block min-w-80 p-2 my-2 rounded ring-1 ring-slate-200 focus:outline-none focus:ring-slate-300;
+    }
+}
